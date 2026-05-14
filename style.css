@@ -1,5 +1,18 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Gravitas+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+
+:root {
+   --titulo: "Gravitas One", serif;
+   --conteudo: "Gochi Hand", cursive;
+   --subtitulo: "Great Vibes", cursive;
+}
+
 /* Configurações de HTML e BODY*/
  * {
     margin: 0px;
@@ -22,10 +35,14 @@
  header > h1 {
     padding-top: 50px;
     font-variant: small-caps;
+    font-family: var(--titulo);
+    font-size: 300%;
  }
 
  header > p {
     padding-bottom: 50px;
+    font-family: var(--subtitulo);
+    font-size: 25px;
  }
 
  /* Configuração dos links*/
@@ -54,11 +71,17 @@
 section.normal {
     background-color: white;
     color: black;
+    font-family: var(--conteudo);
 }
 
 section.imagem {
     background-color: rgb(51, 51, 51);
     color: white;
+    text-shadow: 2px 2px 0px black;
+    box-shadow: inset 6px 6px 13px black;
+    background-size: cover;
+    background-attachment: fixed;
+
 }
 
 /*Configurações genéricas*/
@@ -66,13 +89,33 @@ section.imagem {
 section {
     padding-top: 10vh;
     padding-bottom: 10vh;
+    padding-left: 30vh;
     line-height: 2em;
     padding-left: 30px;
+    font-size: 3.5vw;
+    font-family: var(--conteudo);
+}
+
+section > p {
+   padding-bottom: 2em;
 }
 
 /*Caixas trasnparentes de contraste*/
 
-section > imagem > p {
+section.imagem > p {
+    display: inline-block;
     width: 400px;
     background-color: rgb(0, 0, 0, 0.253);
+    padding: 5px;
+}
+
+/*Adicionando imagens*/
+
+section#img01 {
+   background-image: url(imagens/background001.jpg);
+   background-position: right center;
+}
+
+section#img02 {
+   background-image: url(imagens/background002.jpg);
 }
